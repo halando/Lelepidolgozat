@@ -13,8 +13,25 @@ public class Lelepi {
     }
     private double bekerDatas() {
         String aoldalStr = beker("A oldal:");
+        if(!this.checkInput(aoldalStr)){
+            System.err.println("Hiba! Csak számot lehet beírni.");
+            throw new NumberFormatException("Csak szám");
+        }
+       
         String boldalStr = beker("B oldal:");
+        if(!this.checkInput(boldalStr)){
+            System.err.println("Hiba! Csak számot lehet beírni.");
+            throw new NumberFormatException("Csak szám");
+        }
+        
         String coldalStr = beker("C oldal:");
+        if(!this.checkInput(coldalStr)){
+            System.err.println("Hiba! Csak számot lehet beírni.");
+            throw new NumberFormatException("Csak szám");
+        }
+        
+
+       
       
 
         double aoldal = Double.parseDouble(aoldalStr);
@@ -30,12 +47,14 @@ public class Lelepi {
         return scanner.nextLine();
         
     }
-    public double szamitTenylegesLelepi(double betet, double nevleges,double tokesites_szam){
-        double tenyleges = (Math.pow((
-            1 + (nevleges/(100.*tokesites_szam))
-        ),tokesites_szam)-1)*betet;
-        return tenyleges;
+    public double szamitTenylegesLelepi(double aoldal, double boldal, double coldal){
+        double terfogat = aoldal * boldal *coldal;
+
+        return terfogat;
+
     }
+       
+    
     public boolean checkInput(String input){
        if( input.matches("[0-9.,]+")) {
         return true;
@@ -43,5 +62,4 @@ public class Lelepi {
         return false;
        }
     }
-}
 }

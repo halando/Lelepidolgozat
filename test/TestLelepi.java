@@ -1,4 +1,3 @@
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -18,15 +17,15 @@ public class TestLelepi {
     }
 
     @Test
-    public void testSzamitTenylegesKamat() {
+    public void testSzamitLelepi() {
 
-        double actual = lelepi.szamitTenylegesKamat(50000, 5, 1);
-        assertEquals(actual, 2500.0, 0.01, "Nem 2500-t kaptam");
+        double actual = lelepi.szamitTenylegesLelepi(30, 20, 10);
+        assertEquals(actual, 6000.0,  "Nem 6000-t kaptam");
     }
     @Test
-    public void testSzamitTenylegesKamatSecond() {
-        double actual = lelepi.szamitTenylegesKamat(50000, 3, 12);
-        assertEquals(actual, 1520.7, 0.1, "Nem 1520-t kaptam");
+    public void testSzamitTenylegesLelepiSecond() {
+        double actual = lelepi.szamitTenylegesLelepi(10, 12, 14);
+        assertEquals(actual, 1680.0, "Nem 1680-t kaptam");
     }
     @Test
     public void testCheckInput(){
@@ -44,4 +43,5 @@ public class TestLelepi {
         assertFalse(actual);
     }
 }
-}
+
+
