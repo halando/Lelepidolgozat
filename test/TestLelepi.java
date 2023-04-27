@@ -1,3 +1,12 @@
+/*
+* File: ButtonPanel.java
+* Author:Andó Attila
+* Copyright: 2023- Andó Attila
+* Group: Szoft I/1/N
+* Date: 2023-04-27
+* Github: https://github.com/halando/Lelepidolgozat
+* Licenc: GNU GPL
+*/
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
